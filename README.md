@@ -1,3 +1,3 @@
 # flask-lambda
 
-A simple implementation of Flask using AWS Lambda.
+A simple Terraform deployment of Flask using AWS Lambda.
