@@ -6,19 +6,19 @@ git clone https://github.com/rei-nld/flask-lambda.git && cd flask-lambda
 terraform init && terraform apply -auto-approve
 ```
 
-# How to manually rebuild dependencies.zip (to be implemented in CI/CD)
+# How to manually rebuild **dependencies.zip** (to be implemented in CI/CD)
 
 x86_64:
 ```
 rm -rf src/dependencies.zip && \
 pip install \
 --platform manylinux2014_x86_64 \
---target=src/dependencies \
+--target=python \
 --implementation cp \
---python-version 3.<version:number> \
+--python-version 3.12 \
 --only-binary=:all: --upgrade \
-flask aws-wsgi boto3 && \
-zip -r src/dependencies.zip src/dependencies && rm -rf src/dependencies
+-r requirements.txt && \
+zip -r src/dependencies.zip python && rm -rf python
 ```
 
 ARM64:
@@ -26,10 +26,10 @@ ARM64:
 rm -rf src/dependencies.zip && \
 pip install \
 --platform manylinux2014_aarch64 \
---target=src/dependencies \
+--target=python \
 --implementation cp \
---python-version 3.<version:number> \
+--python-version 3.12 \
 --only-binary=:all: --upgrade \
-flask aws-wsgi boto3 && \
-zip -r src/dependencies.zip src/dependencies && rm -rf src/dependencies
+-r requirements.txt && \
+zip -r src/dependencies.zip python && rm -rf python
 ```
