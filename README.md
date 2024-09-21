@@ -17,7 +17,7 @@ pip install \
 --implementation cp \
 --python-version 3.<version:number> \
 --only-binary=:all: --upgrade \
-<package:name> && \
+flask aws-wsgi boto3 && \
 zip -r src/dependencies.zip src/dependencies && rm -rf src/dependencies
 ```
 
@@ -30,6 +30,6 @@ pip install \
 --implementation cp \
 --python-version 3.<version:number> \
 --only-binary=:all: --upgrade \
-<package:name> && \
+flask aws-wsgi boto3 && \
 zip -r src/dependencies.zip src/dependencies && rm -rf src/dependencies
 ```
