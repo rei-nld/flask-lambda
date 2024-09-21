@@ -1,6 +1,6 @@
 # flask-lambda
 
-A simple Terraform deployment of Flask using AWS Lambda.
+Flask implementation in AWS Lambda
 ```
 git clone https://github.com/rei-nld/flask-lambda.git && cd flask-lambda
 terraform init && terraform apply -auto-approve
