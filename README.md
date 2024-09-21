@@ -6,7 +6,9 @@ git clone https://github.com/rei-nld/flask-lambda.git && cd flask-lambda
 terraform init && terraform apply -auto-approve
 ```
 
-# How to manually rebuild **dependencies.zip** (to be implemented in CI/CD)
+# How to manually rebuild **dependencies.zip**
+
+(to be implemented in CI/CD)
 
 x86_64:
 ```
