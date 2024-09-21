@@ -15,7 +15,7 @@ pip install \
 --platform manylinux2014_x86_64 \
 --target=src/dependencies \
 --implementation cp \
---python-version 3.<version:number>> \
+--python-version 3.<version:number> \
 --only-binary=:all: --upgrade \
 <package:name> && \
 zip -r src/dependencies.zip src/dependencies && rm -rf src/dependencies
